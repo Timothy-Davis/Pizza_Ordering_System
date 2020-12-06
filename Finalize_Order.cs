@@ -21,5 +21,10 @@ namespace Pizza_Ordering_System
         {
             MessageBox.Show("Thank you very very very very very very very much. We need this business. We're going under, and you are the only thing saving us. Thanks man honestly. Like, bro. Thank you. Seriously.", "ty", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void return_button_Click(object sender, EventArgs e)
+        {
+            Form.ActiveForm.Close();
+        }
     }
 }

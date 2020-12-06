@@ -37,6 +37,7 @@
             this.total_label = new System.Windows.Forms.Label();
             this.confirm_button = new System.Windows.Forms.Button();
             this.cancel_order_button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // menu_label
@@ -67,10 +68,11 @@
             this.menuItem2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.menuItem2.Location = new System.Drawing.Point(12, 109);
             this.menuItem2.Name = "menuItem2";
-            this.menuItem2.Size = new System.Drawing.Size(335, 24);
+            this.menuItem2.Size = new System.Drawing.Size(322, 24);
             this.menuItem2.TabIndex = 2;
-            this.menuItem2.Text = "Classic: Pepperoni (can\'t go wrong)     $9.99";
+            this.menuItem2.Text = "Classic: Pepperoni (can\'t go wrong)     $10\r\n";
             this.menuItem2.UseVisualStyleBackColor = true;
+            this.menuItem2.CheckedChanged += new System.EventHandler(this.menuItem2_CheckedChanged);
             // 
             // menuItem4
             // 
@@ -82,6 +84,7 @@
             this.menuItem4.TabIndex = 4;
             this.menuItem4.Text = "Salty Fish Pizza: It has anchovies     $2.00";
             this.menuItem4.UseVisualStyleBackColor = true;
+            this.menuItem4.CheckedChanged += new System.EventHandler(this.menuItem4_CheckedChanged);
             // 
             // menuItem3
             // 
@@ -93,6 +96,7 @@
             this.menuItem3.TabIndex = 3;
             this.menuItem3.Text = "Gucci Supreme: It\'s got everything     $10000";
             this.menuItem3.UseVisualStyleBackColor = true;
+            this.menuItem3.CheckedChanged += new System.EventHandler(this.menuItem3_CheckedChanged);
             // 
             // menuItem5
             // 
@@ -104,16 +108,17 @@
             this.menuItem5.TabIndex = 5;
             this.menuItem5.Text = "Three Meat: Pepperoni, Bacon, Ham     $10.00";
             this.menuItem5.UseVisualStyleBackColor = true;
+            this.menuItem5.CheckedChanged += new System.EventHandler(this.menuItem5_CheckedChanged);
             // 
             // total_label
             // 
             this.total_label.AutoSize = true;
             this.total_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.total_label.Location = new System.Drawing.Point(560, 61);
+            this.total_label.Location = new System.Drawing.Point(671, 61);
             this.total_label.Name = "total_label";
-            this.total_label.Size = new System.Drawing.Size(158, 31);
+            this.total_label.Size = new System.Drawing.Size(67, 31);
             this.total_label.TabIndex = 7;
-            this.total_label.Text = "Total: $0.00";
+            this.total_label.Text = "0.00";
             // 
             // confirm_button
             // 
@@ -137,11 +142,22 @@
             this.cancel_order_button.UseVisualStyleBackColor = true;
             this.cancel_order_button.Click += new System.EventHandler(this.cancel_order_button_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.Location = new System.Drawing.Point(569, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 31);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Total: $";
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cancel_order_button);
             this.Controls.Add(this.confirm_button);
             this.Controls.Add(this.total_label);
@@ -169,5 +185,6 @@
         private System.Windows.Forms.Label total_label;
         private System.Windows.Forms.Button confirm_button;
         private System.Windows.Forms.Button cancel_order_button;
+        private System.Windows.Forms.Label label1;
     }
 }

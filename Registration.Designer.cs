@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.register_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.firstNameBox = new System.Windows.Forms.TextBox();
+            this.lastNameBox = new System.Windows.Forms.TextBox();
+            this.addressBox = new System.Windows.Forms.TextBox();
+            this.zipBox = new System.Windows.Forms.TextBox();
+            this.stateBox = new System.Windows.Forms.TextBox();
+            this.cityBox = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.phoneNumberBox = new System.Windows.Forms.TextBox();
+            this.verifyPasswordBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +50,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.registration_submit_button = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // register_label
@@ -63,88 +66,88 @@
             this.register_label.TabIndex = 0;
             this.register_label.Text = "Register";
             // 
-            // textBox1
+            // firstNameBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Vivaldi", 8.25F);
-            this.textBox1.Location = new System.Drawing.Point(278, 158);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 28);
-            this.textBox1.TabIndex = 1;
+            this.firstNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameBox.Location = new System.Drawing.Point(278, 158);
+            this.firstNameBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.firstNameBox.Name = "firstNameBox";
+            this.firstNameBox.Size = new System.Drawing.Size(265, 28);
+            this.firstNameBox.TabIndex = 1;
             // 
-            // textBox2
+            // lastNameBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Vivaldi", 8.25F);
-            this.textBox2.Location = new System.Drawing.Point(278, 228);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(265, 28);
-            this.textBox2.TabIndex = 2;
+            this.lastNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameBox.Location = new System.Drawing.Point(278, 228);
+            this.lastNameBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lastNameBox.Name = "lastNameBox";
+            this.lastNameBox.Size = new System.Drawing.Size(265, 28);
+            this.lastNameBox.TabIndex = 2;
             // 
-            // textBox3
+            // addressBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Vivaldi", 8.25F);
-            this.textBox3.Location = new System.Drawing.Point(278, 303);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(265, 28);
-            this.textBox3.TabIndex = 3;
+            this.addressBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressBox.Location = new System.Drawing.Point(278, 303);
+            this.addressBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(265, 28);
+            this.addressBox.TabIndex = 3;
             // 
-            // textBox4
+            // zipBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(278, 520);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(265, 26);
-            this.textBox4.TabIndex = 6;
+            this.zipBox.Location = new System.Drawing.Point(278, 520);
+            this.zipBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.zipBox.Name = "zipBox";
+            this.zipBox.Size = new System.Drawing.Size(265, 26);
+            this.zipBox.TabIndex = 6;
             // 
-            // textBox5
+            // stateBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(278, 445);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(265, 26);
-            this.textBox5.TabIndex = 5;
+            this.stateBox.Location = new System.Drawing.Point(278, 445);
+            this.stateBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.stateBox.Name = "stateBox";
+            this.stateBox.Size = new System.Drawing.Size(265, 26);
+            this.stateBox.TabIndex = 5;
             // 
-            // textBox6
+            // cityBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(278, 375);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(265, 26);
-            this.textBox6.TabIndex = 4;
+            this.cityBox.Location = new System.Drawing.Point(278, 375);
+            this.cityBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cityBox.Name = "cityBox";
+            this.cityBox.Size = new System.Drawing.Size(265, 26);
+            this.cityBox.TabIndex = 4;
             // 
-            // textBox7
+            // passwordBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(278, 732);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(265, 26);
-            this.textBox7.TabIndex = 9;
+            this.passwordBox.Location = new System.Drawing.Point(278, 799);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(265, 26);
+            this.passwordBox.TabIndex = 9;
             // 
-            // textBox8
+            // emailBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(278, 657);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(265, 26);
-            this.textBox8.TabIndex = 8;
+            this.emailBox.Location = new System.Drawing.Point(278, 657);
+            this.emailBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(265, 26);
+            this.emailBox.TabIndex = 8;
             // 
-            // textBox9
+            // phoneNumberBox
             // 
-            this.textBox9.Location = new System.Drawing.Point(278, 588);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(265, 26);
-            this.textBox9.TabIndex = 7;
+            this.phoneNumberBox.Location = new System.Drawing.Point(278, 588);
+            this.phoneNumberBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.phoneNumberBox.Name = "phoneNumberBox";
+            this.phoneNumberBox.Size = new System.Drawing.Size(265, 26);
+            this.phoneNumberBox.TabIndex = 7;
             // 
-            // textBox12
+            // verifyPasswordBox
             // 
-            this.textBox12.Location = new System.Drawing.Point(278, 802);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(265, 26);
-            this.textBox12.TabIndex = 10;
+            this.verifyPasswordBox.Location = new System.Drawing.Point(278, 869);
+            this.verifyPasswordBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.verifyPasswordBox.Name = "verifyPasswordBox";
+            this.verifyPasswordBox.Size = new System.Drawing.Size(265, 26);
+            this.verifyPasswordBox.TabIndex = 10;
             // 
             // label1
             // 
@@ -238,7 +241,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label9.Location = new System.Drawing.Point(52, 722);
+            this.label9.Location = new System.Drawing.Point(52, 789);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(139, 32);
@@ -249,7 +252,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label10.Location = new System.Drawing.Point(52, 797);
+            this.label10.Location = new System.Drawing.Point(52, 864);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(219, 32);
@@ -259,7 +262,7 @@
             // registration_submit_button
             // 
             this.registration_submit_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.registration_submit_button.Location = new System.Drawing.Point(246, 892);
+            this.registration_submit_button.Location = new System.Drawing.Point(246, 964);
             this.registration_submit_button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.registration_submit_button.Name = "registration_submit_button";
             this.registration_submit_button.Size = new System.Drawing.Size(170, 75);
@@ -268,11 +271,40 @@
             this.registration_submit_button.UseVisualStyleBackColor = true;
             this.registration_submit_button.Click += new System.EventHandler(this.registration_submit_button_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 20);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "label11";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label12.Location = new System.Drawing.Point(52, 717);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(145, 32);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Username";
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Location = new System.Drawing.Point(278, 724);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(265, 26);
+            this.usernameTextBox.TabIndex = 24;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 1069);
+            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.registration_submit_button);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -284,16 +316,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.verifyPasswordBox);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.emailBox);
+            this.Controls.Add(this.phoneNumberBox);
+            this.Controls.Add(this.zipBox);
+            this.Controls.Add(this.stateBox);
+            this.Controls.Add(this.cityBox);
+            this.Controls.Add(this.addressBox);
+            this.Controls.Add(this.lastNameBox);
+            this.Controls.Add(this.firstNameBox);
             this.Controls.Add(this.register_label);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Registration";
@@ -306,16 +338,16 @@
         #endregion
 
         private System.Windows.Forms.Label register_label;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox firstNameBox;
+        private System.Windows.Forms.TextBox lastNameBox;
+        private System.Windows.Forms.TextBox addressBox;
+        private System.Windows.Forms.TextBox zipBox;
+        private System.Windows.Forms.TextBox stateBox;
+        private System.Windows.Forms.TextBox cityBox;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.TextBox emailBox;
+        private System.Windows.Forms.TextBox phoneNumberBox;
+        private System.Windows.Forms.TextBox verifyPasswordBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -327,5 +359,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button registration_submit_button;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox usernameTextBox;
     }
 }

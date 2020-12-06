@@ -70,7 +70,7 @@
             this.order_info.Name = "order_info";
             this.order_info.Size = new System.Drawing.Size(346, 77);
             this.order_info.TabIndex = 2;
-            this.order_info.Text = "El Diablo";
+            this.order_info.Text = "";
             // 
             // subtotal_label
             // 
@@ -256,6 +256,7 @@
             this.go_back_button.TabIndex = 36;
             this.go_back_button.Text = "Go Back";
             this.go_back_button.UseVisualStyleBackColor = true;
+            this.go_back_button.Click += new System.EventHandler(this.go_back_button_Click);
             // 
             // log_in_button
             // 
