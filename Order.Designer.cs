@@ -123,18 +123,18 @@
             // confirm_button
             // 
             this.confirm_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.confirm_button.Location = new System.Drawing.Point(231, 362);
+            this.confirm_button.Location = new System.Drawing.Point(286, 310);
             this.confirm_button.Name = "confirm_button";
-            this.confirm_button.Size = new System.Drawing.Size(125, 46);
+            this.confirm_button.Size = new System.Drawing.Size(208, 46);
             this.confirm_button.TabIndex = 8;
-            this.confirm_button.Text = "Confirm";
+            this.confirm_button.Text = "Proceed to Checkout";
             this.confirm_button.UseVisualStyleBackColor = true;
             this.confirm_button.Click += new System.EventHandler(this.confirm_button_Click);
             // 
             // cancel_order_button
             // 
             this.cancel_order_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cancel_order_button.Location = new System.Drawing.Point(405, 362);
+            this.cancel_order_button.Location = new System.Drawing.Point(327, 362);
             this.cancel_order_button.Name = "cancel_order_button";
             this.cancel_order_button.Size = new System.Drawing.Size(125, 46);
             this.cancel_order_button.TabIndex = 9;

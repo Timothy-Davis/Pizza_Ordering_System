@@ -31,8 +31,8 @@ namespace Pizza_Ordering_System
         {
             user.set_order_total(int.Parse(total_label.Text));
 
-            Order_Confirm confirm_order_form = new Order_Confirm();
-            confirm_order_form.Show();
+            Finalize_Order finalize_order_form = new Finalize_Order();
+            finalize_order_form.Show();
         }
 
 

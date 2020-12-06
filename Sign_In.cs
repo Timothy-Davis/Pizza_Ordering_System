@@ -46,6 +46,7 @@ namespace Pizza_Ordering_System
                 if (myReader.Read())
                 {
                     user.set_signed_in(myReader["userName"].ToString());
+                    user.set_user_id(int.Parse(myReader["customerID"].ToString()));
                 } 
                 else
                 {
@@ -86,6 +87,7 @@ namespace Pizza_Ordering_System
     {
         public static bool is_signed_in = false;
         public static string signed_in = "";
+        public static int user_id = 0;
 
         public static bool El_Diablo = false;
         public static bool Pepperoni = false;
@@ -169,6 +171,11 @@ namespace Pizza_Ordering_System
         public static void set_order_total(int total)
         {
             order_total = total;
+        }
+
+        public static void set_user_id(int id)
+        {
+            user_id = id;
         }
     }
 }
