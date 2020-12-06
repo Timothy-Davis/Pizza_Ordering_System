@@ -81,6 +81,11 @@ namespace Pizza_Ordering_System
             ActiveForm.Hide();
             main_menu_form.Show();
         }
+
+        private void UsernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public static class user
