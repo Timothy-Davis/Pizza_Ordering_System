@@ -22,15 +22,17 @@ namespace Pizza_Ordering_System
         public OrderHistory()
         {
             InitializeComponent();
-          
-         
+            getItemIds();
+            getItemValues();
+
 
         }
         public OrderHistory(int userNum)
         {
             InitializeComponent();
             userID = userNum;
-         
+            getItemIds();
+            getItemValues();
             
         }
 
