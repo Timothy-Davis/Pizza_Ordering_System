@@ -44,5 +44,17 @@ namespace Pizza_Ordering_System
             Form orderHistory = new OrderHistory();
             orderHistory.Show();
         }
+
+        private void logout_bttn_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Are you sure you want to log out?", "Log out", MessageBoxButtons.YesNo);
+
+            if (res == DialogResult.Yes){
+                user.sign_out();
+                Form login = new Sign_In();
+                login.Show();
+                this.Close();
+            }
+        }
     }
 }

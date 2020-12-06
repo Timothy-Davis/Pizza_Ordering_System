@@ -101,6 +101,12 @@ namespace Pizza_Ordering_System
             signed_in = username;
         }
 
+        public static void sign_out()
+        {
+            is_signed_in = false;
+            signed_in = null;
+        }
+
         public static string get_signed_in()
         {
             return signed_in;
