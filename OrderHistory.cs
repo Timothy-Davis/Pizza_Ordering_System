@@ -18,24 +18,20 @@ namespace Pizza_Ordering_System
         public OrderHistory()
         {
             InitializeComponent();
+            getOrderIDS();
+            
+
         }
         public OrderHistory(int userNum)
         {
             InitializeComponent();
             userID = userNum;
+            getOrderIDS();
+       
         }
-        public MySqlConnection connect_to_database()
+
+        public void getOrderIDS()
         {
-            string connStr = "server=157.89.28.130;user=ChangK;database=csc440;port=3306;password=Wallace#409;";
-
-            MySqlConnection conn = new MySqlConnection(connStr);
-
-            return conn;
-        }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
             MySqlConnection conn = connect_to_database();
 
             try
@@ -53,15 +49,16 @@ namespace Pizza_Ordering_System
                 }
                 else
                 {
-                    listBox1.Text = "No orders for this user were found.";
-                    return;
+                    listBox1.Items.Add("No orders for this user were found.");
+                    
                 }
-
-                myReader.Close();
                 for (int i = 0; i < ItemIDS.Count; i++)
                 {
-                    Console.WriteLine(ItemIDS[i]);
+                    listBox1.Items.Add(ItemIDS[i]);
                 }
+                myReader.Close();
+                
+               
             }
             catch (Exception ex)
             {
@@ -69,24 +66,32 @@ namespace Pizza_Ordering_System
                 return;
             }
 
-            Main_Menu main_menu_form = new Main_Menu();
-            ActiveForm.Hide();
-            main_menu_form.Show();
+            for (int i = 0; i < ItemIDS.Count; i++)
+            {
+                //listBox1.Text = ItemIDS[i].ToString();
+            }
+            
 
             return;
         }
 
-        private void register_button_Click(object sender, EventArgs e)
+        public MySqlConnection connect_to_database()
         {
-            Registration register_form = new Registration();
-            register_form.Show();
+            string connStr = "server=157.89.28.130;user=ChangK;database=csc440;port=3306;password=Wallace#409;";
+
+            MySqlConnection conn = new MySqlConnection(connStr);
+
+            return conn;
+        }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            
         }
 
-        private void skip_button_Click(object sender, EventArgs e)
-        {
-            Main_Menu main_menu_form = new Main_Menu();
-            ActiveForm.Hide();
-            main_menu_form.Show();
-        }
+        
+        
     }
 }
+
