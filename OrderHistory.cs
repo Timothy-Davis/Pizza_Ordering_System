@@ -19,12 +19,15 @@ namespace Pizza_Ordering_System
         {
             InitializeComponent();
             getOrderIDS();
+            listBox1.Items.Add("Chicken Shit");
+
         }
         public OrderHistory(int userNum)
         {
             InitializeComponent();
             userID = userNum;
             getOrderIDS();
+            listBox1.Items.Add("Chicken Shit");
         }
 
         public void getOrderIDS()
@@ -46,13 +49,16 @@ namespace Pizza_Ordering_System
                 }
                 else
                 {
-                    //listBox1.Text = "No orders for this user were found.";
-                    return;
+                    listBox1.Items.Add("No orders for this user were found.");
+                    
                 }
-
+                for (int i = 0; i < ItemIDS.Count; i++)
+                {
+                    listBox1.Items.Add(ItemIDS[i]);
+                }
                 myReader.Close();
-                listBox1.Items.Add("Chicken Shit");
-
+                
+                Console.WriteLine("Yeet");
             }
             catch (Exception ex)
             {

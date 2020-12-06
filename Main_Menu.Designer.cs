@@ -33,7 +33,6 @@
             this.create_order_button = new System.Windows.Forms.Button();
             this.view_orders_bttn = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // logged_in_label
@@ -59,7 +58,7 @@
             // create_order_button
             // 
             this.create_order_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.create_order_button.Location = new System.Drawing.Point(298, 269);
+            this.create_order_button.Location = new System.Drawing.Point(474, 246);
             this.create_order_button.Name = "create_order_button";
             this.create_order_button.Size = new System.Drawing.Size(213, 110);
             this.create_order_button.TabIndex = 3;
@@ -71,12 +70,13 @@
             // 
             this.view_orders_bttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.view_orders_bttn.Location = new System.Drawing.Point(886, 77);
-            this.view_orders_bttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_orders_bttn.Margin = new System.Windows.Forms.Padding(2);
             this.view_orders_bttn.Name = "view_orders_bttn";
             this.view_orders_bttn.Size = new System.Drawing.Size(132, 43);
             this.view_orders_bttn.TabIndex = 4;
             this.view_orders_bttn.Text = "View Orders";
             this.view_orders_bttn.UseVisualStyleBackColor = true;
+            this.view_orders_bttn.Click += new System.EventHandler(this.view_orders_bttn_Click);
             // 
             // logo
             // 
@@ -91,23 +91,11 @@
             this.logo.TabIndex = 9;
             this.logo.Text = "Tony\'s Tantalizing Treats";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button1.Location = new System.Drawing.Point(619, 269);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 110);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Order History";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Main_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 639);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.view_orders_bttn);
             this.Controls.Add(this.create_order_button);
@@ -127,6 +115,5 @@
         private System.Windows.Forms.Button create_order_button;
         private System.Windows.Forms.Button view_orders_bttn;
         private System.Windows.Forms.Label logo;
-        private System.Windows.Forms.Button button1;
     }
 }

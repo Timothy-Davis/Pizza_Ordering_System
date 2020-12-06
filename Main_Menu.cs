@@ -37,11 +37,12 @@ namespace Pizza_Ordering_System
             order_form.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        private void view_orders_bttn_Click(object sender, EventArgs e)
         {
             Form orderHistory = new OrderHistory();
             orderHistory.Show();
-
         }
     }
 }
