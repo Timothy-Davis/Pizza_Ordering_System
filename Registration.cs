@@ -43,20 +43,26 @@ namespace Pizza_Ordering_System
             string phoneNumber = phoneNumberBox.Text;
             string email = emailBox.Text;
             string username = usernameTextBox.Text;
+            string cc_num = creditCardNumBox.Text;
+            string cc_exp = creditCardExpBox.Text;
+            string cc_cvc = CreditCardCVCbox.Text;
 
             MySqlConnection conn = connect_to_database();
 
             try
             {
                 conn.Open();
-                string sql = "INSERT INTO davis_pizza_user (userName, password, address, phone, userEmail) " +
-                    "VALUES (@username, @password, @address, @phone, @email)";
+                string sql = "INSERT INTO davis_pizza_user (userName, password, address, phone, userEmail, ) " +
+                    "VALUES (@username, @password, @address, @phone, @email, @cc_num, @cc_exp, @cc_cvc)";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
                 cmd.Parameters.AddWithValue("@address", address);
                 cmd.Parameters.AddWithValue("@phone", phoneNumber);
                 cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@cc_num", cc_num);
+                cmd.Parameters.AddWithValue("@cc_exp", cc_exp);
+                cmd.Parameters.AddWithValue("@cc_cvc", cc_cvc);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -68,5 +74,7 @@ namespace Pizza_Ordering_System
             Form.ActiveForm.Close();
             return;
         }
+
+
     }
 }
