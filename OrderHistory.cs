@@ -14,30 +14,34 @@ namespace Pizza_Ordering_System
     public partial class OrderHistory : Form
     {
         public int userID = -1;
-        ArrayList ItemIDS = new ArrayList();
+        ArrayList OrderIds = new ArrayList();
+        String ItemIds = "";
+        ArrayList ItemIDNums = new ArrayList();
+        ArrayList ItemIDStr = new ArrayList();
+        int[] ItemIDNum;
         public OrderHistory()
         {
             InitializeComponent();
-            getOrderIDS();
-            
+          
+         
 
         }
         public OrderHistory(int userNum)
         {
             InitializeComponent();
             userID = userNum;
-            getOrderIDS();
-       
+         
+            
         }
 
-        public void getOrderIDS()
+        public void getItemIds()
         {
             MySqlConnection conn = connect_to_database();
 
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM davis_order WHERE userID = @userID";
+                string sql = "SELECT ItemID, orderID FROM davis_order WHERE userID = @userID";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@userID", userID);
 
@@ -45,20 +49,21 @@ namespace Pizza_Ordering_System
                 MySqlDataReader myReader = cmd.ExecuteReader();
                 if (myReader.Read())
                 {
-                    ItemIDS.Add(myReader["ItemID"]);
+                    ItemIDStr.Add(myReader["ItemID"].ToString());
+                    OrderIds.Add(Int32.Parse(myReader["OrderID"].ToString()));
+
+
                 }
                 else
                 {
                     listBox1.Items.Add("No orders for this user were found.");
-                    
+
                 }
-                for (int i = 0; i < ItemIDS.Count; i++)
-                {
-                    listBox1.Items.Add(ItemIDS[i]);
-                }
+
                 myReader.Close();
                 
-               
+
+
             }
             catch (Exception ex)
             {
@@ -66,13 +71,79 @@ namespace Pizza_Ordering_System
                 return;
             }
 
-            for (int i = 0; i < ItemIDS.Count; i++)
-            {
-                //listBox1.Text = ItemIDS[i].ToString();
-            }
-            
 
-            return;
+
+        }
+
+        public void getItemValues()
+        {
+            ArrayList MenuItemIDS = new ArrayList(); 
+            ArrayList ItemNames = new ArrayList();
+            //ArrayList ItemDescriptions = new ArrayList();
+
+            MySqlConnection conn = connect_to_database();
+
+            try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM davis_menu_item";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@userID", userID);
+
+
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                if (myReader.Read())
+                {
+                    MenuItemIDS.Add(myReader["itemID"].ToString());
+                    ItemNames.Add( myReader["ItemName"].ToString());
+                    //ItemDescriptions.Add(myReader["description"].ToString());
+                }
+                else
+                {
+                    listBox1.Items.Add("No Items were found for this order.");
+                }
+
+                myReader.Close();
+
+                
+                for (int i = 0; i < OrderIds.Count; i++)
+                {
+                    listBox1.Items.Add("Order " + i + 1);
+                    
+
+                    for (int j = 0; j < ItemIDStr.Count; j++)
+                    {
+                        String thing = (string)ItemIDStr[j];
+                        String[] StringThing = thing.Split(',');
+                        ItemIDNum= new int[StringThing.Length];
+                        for (int k = 0; k < StringThing.Length; k++)
+                        {
+                            ItemIDNum[k] = Int32.Parse(StringThing[k]);
+                        }
+                    }
+                    for (int j = 0; j < ItemIDNum.Length; j++)
+                    {
+                        for (int k = 0; k < MenuItemIDS.Count; k++)
+                        {
+                            if (ItemIDNum[j] == Int32.Parse(MenuItemIDS[k].ToString())){
+                                listBox1.Items.Add(ItemNames[k]);
+                            }
+                        }
+                        
+                    }
+
+                   
+                    
+                }
+                   
+                
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString() + "***");
+                return;
+            }
         }
 
         public MySqlConnection connect_to_database()
