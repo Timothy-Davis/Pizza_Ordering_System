@@ -39,7 +39,7 @@ namespace Pizza_Ordering_System
             string firstName = firstNameBox.Text;
             string lastName = lastNameBox.Text;
             string password = passwordBox.Text;
-            string address = addressBox.Text + ", " + cityBox.Text + ", " + stateBox.Text + " " + zipBox;
+            string address = addressBox.Text;
             string phoneNumber = phoneNumberBox.Text;
             string email = emailBox.Text;
             string username = usernameTextBox.Text;
