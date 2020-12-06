@@ -48,33 +48,36 @@ namespace Pizza_Ordering_System
             string cc_cvc = CreditCardCVCbox.Text;
 
             MySqlConnection conn = connect_to_database();
-
-            try
-            {
-                conn.Open();
-                string sql = "INSERT INTO davis_pizza_user (userName, password, address, phone, userEmail, creditCardNum, creditExp, CreditSecCode, Name ) " +
-                    "VALUES (@username, @password, @address, @phone, @email, @cc_num, @cc_exp, @cc_cvc, @name)";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
-                cmd.Parameters.AddWithValue("@address", address);
-                cmd.Parameters.AddWithValue("@phone", phoneNumber);
-                cmd.Parameters.AddWithValue("@email", email);
-                cmd.Parameters.AddWithValue("@cc_num", cc_num);
-                cmd.Parameters.AddWithValue("@cc_exp", cc_exp);
-                cmd.Parameters.AddWithValue("@cc_cvc", cc_cvc);
-                cmd.Parameters.AddWithValue("@name", firstName + " " + lastName);
-                cmd.ExecuteNonQuery();
+            if(cc_num.Length > 16 || cc_num.Length < 15) {
+                MessageBox.Show("Credit Card number must be 15-16 digits long", "Submission Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Please ensure that the information is entered accurately", "Submission Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine(ex.ToString());
+            else
+                try
+                {
+                    conn.Open();
+                    string sql = "INSERT INTO davis_pizza_user (userName, password, address, phone, userEmail, creditCardNum, creditExp, CreditSecCode, Name ) " +
+                        "VALUES (@username, @password, @address, @phone, @email, @cc_num, @cc_exp, @cc_cvc, @name)";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.Parameters.AddWithValue("@address", address);
+                    cmd.Parameters.AddWithValue("@phone", phoneNumber);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@cc_num", cc_num);
+                    cmd.Parameters.AddWithValue("@cc_exp", cc_exp);
+                    cmd.Parameters.AddWithValue("@cc_cvc", cc_cvc);
+                    cmd.Parameters.AddWithValue("@name", firstName + " " + lastName);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Please ensure that the information is entered accurately", "Submission Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.WriteLine(ex.ToString());
+                }
+                conn.Close();
+                Form.ActiveForm.Close();
+                return;
             }
-            conn.Close();
-            Form.ActiveForm.Close();
-            return;
-        }
 
 
     }
