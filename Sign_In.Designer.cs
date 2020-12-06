@@ -113,11 +113,11 @@
             // 
             this.logo.AutoSize = true;
             this.logo.BackColor = System.Drawing.SystemColors.Info;
-            this.logo.Font = new System.Drawing.Font("Monotype Corsiva", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logo.Font = new System.Drawing.Font("Monotype Corsiva", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logo.ForeColor = System.Drawing.Color.Red;
-            this.logo.Location = new System.Drawing.Point(563, 9);
+            this.logo.Location = new System.Drawing.Point(395, 9);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(437, 52);
+            this.logo.Size = new System.Drawing.Size(792, 97);
             this.logo.TabIndex = 8;
             this.logo.Text = "Tony\'s Tantalizing Treats";
             // 
