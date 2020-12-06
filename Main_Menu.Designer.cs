@@ -30,9 +30,9 @@
         {
             this.logged_in_label = new System.Windows.Forms.Label();
             this.signinLabel = new System.Windows.Forms.Label();
-            this.pizzeria_header = new System.Windows.Forms.Label();
             this.create_order_button = new System.Windows.Forms.Button();
             this.view_orders_bttn = new System.Windows.Forms.Button();
+            this.logo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // logged_in_label
@@ -57,17 +57,6 @@
             this.signinLabel.TabIndex = 1;
             this.signinLabel.Text = "Timothy Davis";
             // 
-            // pizzeria_header
-            // 
-            this.pizzeria_header.AutoSize = true;
-            this.pizzeria_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.pizzeria_header.Location = new System.Drawing.Point(16, 11);
-            this.pizzeria_header.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.pizzeria_header.Name = "pizzeria_header";
-            this.pizzeria_header.Size = new System.Drawing.Size(776, 76);
-            this.pizzeria_header.TabIndex = 2;
-            this.pizzeria_header.Text = "Tony\'s Tentalizing Treats";
-            // 
             // create_order_button
             // 
             this.create_order_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
@@ -90,14 +79,26 @@
             this.view_orders_bttn.Text = "View Orders";
             this.view_orders_bttn.UseVisualStyleBackColor = true;
             // 
+            // logo
+            // 
+            this.logo.AutoSize = true;
+            this.logo.BackColor = System.Drawing.SystemColors.Info;
+            this.logo.Font = new System.Drawing.Font("Monotype Corsiva", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logo.ForeColor = System.Drawing.Color.Red;
+            this.logo.Location = new System.Drawing.Point(303, 9);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(792, 97);
+            this.logo.TabIndex = 9;
+            this.logo.Text = "Tony\'s Tantalizing Treats";
+            // 
             // Main_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1403, 786);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.view_orders_bttn);
             this.Controls.Add(this.create_order_button);
-            this.Controls.Add(this.pizzeria_header);
             this.Controls.Add(this.signinLabel);
             this.Controls.Add(this.logged_in_label);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -112,8 +113,8 @@
 
         private System.Windows.Forms.Label logged_in_label;
         private System.Windows.Forms.Label signinLabel;
-        private System.Windows.Forms.Label pizzeria_header;
         private System.Windows.Forms.Button create_order_button;
         private System.Windows.Forms.Button view_orders_bttn;
+        private System.Windows.Forms.Label logo;
     }
 }
