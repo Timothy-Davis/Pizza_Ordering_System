@@ -105,6 +105,7 @@ namespace Pizza_Ordering_System
             }
             MessageBox.Show("Thank for for your order!", "Order Placed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+            Form.ActiveForm.Close();
         }
 
         private void return_button_Click(object sender, EventArgs e)
