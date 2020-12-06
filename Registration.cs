@@ -52,8 +52,8 @@ namespace Pizza_Ordering_System
             try
             {
                 conn.Open();
-                string sql = "INSERT INTO davis_pizza_user (userName, password, address, phone, userEmail, ) " +
-                    "VALUES (@username, @password, @address, @phone, @email, @cc_num, @cc_exp, @cc_cvc)";
+                string sql = "INSERT INTO davis_pizza_user (userName, password, address, phone, userEmail, creditCardNum, creditExp, CreditSecCode, Name ) " +
+                    "VALUES (@username, @password, @address, @phone, @email, @cc_num, @cc_exp, @cc_cvc, @name)";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
@@ -63,6 +63,7 @@ namespace Pizza_Ordering_System
                 cmd.Parameters.AddWithValue("@cc_num", cc_num);
                 cmd.Parameters.AddWithValue("@cc_exp", cc_exp);
                 cmd.Parameters.AddWithValue("@cc_cvc", cc_cvc);
+                cmd.Parameters.AddWithValue("@name", firstName + " " + lastName);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
