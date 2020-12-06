@@ -36,5 +36,10 @@ namespace Pizza_Ordering_System
             Order order_form = new Order();
             order_form.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

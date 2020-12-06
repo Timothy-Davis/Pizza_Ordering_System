@@ -33,16 +33,16 @@
             this.create_order_button = new System.Windows.Forms.Button();
             this.view_orders_bttn = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // logged_in_label
             // 
             this.logged_in_label.AutoSize = true;
             this.logged_in_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.logged_in_label.Location = new System.Drawing.Point(1176, 11);
-            this.logged_in_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.logged_in_label.Location = new System.Drawing.Point(882, 9);
             this.logged_in_label.Name = "logged_in_label";
-            this.logged_in_label.Size = new System.Drawing.Size(181, 25);
+            this.logged_in_label.Size = new System.Drawing.Size(144, 20);
             this.logged_in_label.TabIndex = 0;
             this.logged_in_label.Text = "Currently logged in:";
             // 
@@ -50,20 +50,18 @@
             // 
             this.signinLabel.AutoSize = true;
             this.signinLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.signinLabel.Location = new System.Drawing.Point(1200, 46);
-            this.signinLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.signinLabel.Location = new System.Drawing.Point(900, 37);
             this.signinLabel.Name = "signinLabel";
-            this.signinLabel.Size = new System.Drawing.Size(136, 25);
+            this.signinLabel.Size = new System.Drawing.Size(107, 20);
             this.signinLabel.TabIndex = 1;
             this.signinLabel.Text = "Timothy Davis";
             // 
             // create_order_button
             // 
             this.create_order_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.create_order_button.Location = new System.Drawing.Point(571, 331);
-            this.create_order_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.create_order_button.Location = new System.Drawing.Point(298, 269);
             this.create_order_button.Name = "create_order_button";
-            this.create_order_button.Size = new System.Drawing.Size(284, 135);
+            this.create_order_button.Size = new System.Drawing.Size(213, 110);
             this.create_order_button.TabIndex = 3;
             this.create_order_button.Text = "Create Order";
             this.create_order_button.UseVisualStyleBackColor = true;
@@ -72,9 +70,10 @@
             // view_orders_bttn
             // 
             this.view_orders_bttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.view_orders_bttn.Location = new System.Drawing.Point(1181, 95);
+            this.view_orders_bttn.Location = new System.Drawing.Point(886, 77);
+            this.view_orders_bttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.view_orders_bttn.Name = "view_orders_bttn";
-            this.view_orders_bttn.Size = new System.Drawing.Size(176, 53);
+            this.view_orders_bttn.Size = new System.Drawing.Size(132, 43);
             this.view_orders_bttn.TabIndex = 4;
             this.view_orders_bttn.Text = "View Orders";
             this.view_orders_bttn.UseVisualStyleBackColor = true;
@@ -85,23 +84,35 @@
             this.logo.BackColor = System.Drawing.SystemColors.Info;
             this.logo.Font = new System.Drawing.Font("Monotype Corsiva", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logo.ForeColor = System.Drawing.Color.Red;
-            this.logo.Location = new System.Drawing.Point(303, 9);
+            this.logo.Location = new System.Drawing.Point(227, 7);
+            this.logo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(792, 97);
+            this.logo.Size = new System.Drawing.Size(633, 79);
             this.logo.TabIndex = 9;
             this.logo.Text = "Tony\'s Tantalizing Treats";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.button1.Location = new System.Drawing.Point(619, 269);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 110);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Order History";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Main_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1403, 786);
+            this.ClientSize = new System.Drawing.Size(1052, 639);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.view_orders_bttn);
             this.Controls.Add(this.create_order_button);
             this.Controls.Add(this.signinLabel);
             this.Controls.Add(this.logged_in_label);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Main_Menu";
             this.Text = "Form3";
             this.ResumeLayout(false);
@@ -116,5 +127,6 @@
         private System.Windows.Forms.Button create_order_button;
         private System.Windows.Forms.Button view_orders_bttn;
         private System.Windows.Forms.Label logo;
+        private System.Windows.Forms.Button button1;
     }
 }
