@@ -19,7 +19,7 @@ namespace Pizza_Ordering_System
         {
             InitializeComponent();
             getOrderIDS();
-            listBox1.Items.Add("Chicken Shit");
+            
 
         }
         public OrderHistory(int userNum)
@@ -27,7 +27,7 @@ namespace Pizza_Ordering_System
             InitializeComponent();
             userID = userNum;
             getOrderIDS();
-            listBox1.Items.Add("Chicken Shit");
+       
         }
 
         public void getOrderIDS()
@@ -58,7 +58,7 @@ namespace Pizza_Ordering_System
                 }
                 myReader.Close();
                 
-                Console.WriteLine("Yeet");
+               
             }
             catch (Exception ex)
             {
